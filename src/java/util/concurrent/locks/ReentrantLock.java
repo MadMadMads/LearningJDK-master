@@ -454,7 +454,7 @@ public class ReentrantLock implements Lock, Serializable {
      *
      * @return the estimated number of threads waiting for this lock
      */
-    // 获取【|同步队列|】中排队的结点数量
+    // 获取【|同步队列|】中排队的结点数量acquire
     public final int getQueueLength() {
         return sync.getQueueLength();
     }

@@ -325,7 +325,7 @@ public abstract class AbstractQueuedSynchronizer extends AbstractOwnableSynchron
      * method enq to add new wait node.
      */
     private transient volatile Node tail;   // 【|同步队列|】的尾结点
-    
+
     /**
      * The synchronization state.
      */
@@ -466,8 +466,8 @@ public abstract class AbstractQueuedSynchronizer extends AbstractOwnableSynchron
                 
                 // 如果node结点目前排在了队首，则node线程有权利申请锁
                 if(p == head) {
-                    // 再次尝试申请锁
-                    if(tryAcquire(arg)){
+                 // 再次尝试申请锁
+                    if(tryAcquire(arg)) {
                         // 设置node为头结点（即丢掉了原来的头结点）
                         setHead(node);
                         

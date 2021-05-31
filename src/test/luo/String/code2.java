@@ -18,6 +18,7 @@ public class code2 {
         System.out.println(i);
     }
     public static void main(String[] args) {
-        code1();
+
+
     }
 }
